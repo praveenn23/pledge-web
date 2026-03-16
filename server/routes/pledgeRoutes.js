@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
 const supabase = require('../utils/supabase');
 
 /**
@@ -39,7 +39,7 @@ router.post('/register', async (req, res) => {
       });
     }
 
-    const pledgeId = uuidv4();
+    const pledgeId = crypto.randomUUID();
 
     const { data, error } = await supabase
       .from('pledges')

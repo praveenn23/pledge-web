@@ -51,8 +51,8 @@ router.post('/verify', async (req, res) => {
 
     // Update pledge as OTP verified
     const supabase = require('../utils/supabase');
-    const { v4: uuidv4 } = require('uuid');
-    const certificateId = `WCP-${new Date().getFullYear()}-${uuidv4().toUpperCase().slice(0, 8)}`;
+    const crypto = require('crypto');
+    const certificateId = `WCP-${new Date().getFullYear()}-${crypto.randomUUID().toUpperCase().slice(0, 8)}`;
 
     const { error } = await supabase
       .from('pledges')

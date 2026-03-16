@@ -27,8 +27,17 @@ app.use('/api/otp', otpRoutes);
 app.use('/api/pledge', pledgeRoutes);
 app.use('/api/certificate', require('./routes/certificateRoutes'));
 
+// Mount routes without /api prefix for Vercel compatibility when VITE_API_URL lacks /api
+app.use('/otp', otpRoutes);
+app.use('/pledge', pledgeRoutes);
+app.use('/certificate', require('./routes/certificateRoutes'));
+
 // Health check
 app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
@@ -38,7 +47,12 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error', message: err.message });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Pledge Server running on port ${PORT}`);
-  console.log(`📊 Health: http://localhost:${PORT}/api/health`);
-});
+if (process.env.NODE_ENV !== 'production' || process.env.PORT) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Pledge Server running on port ${PORT}`);
+    console.log(`📊 Health: http://localhost:${PORT}/api/health`);
+  });
+}
+
+// Export for Vercel
+module.exports = app;

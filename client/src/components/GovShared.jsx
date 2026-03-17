@@ -64,7 +64,7 @@ export const GovHeader = ({ subtitle = 'Water Conservation Pledge' }) => (
       <div className="container gov-header-inner">
         <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
           <img src="https://www.cuchd.in/includes/assets/images/header-footer/cu-logo-white.webp" alt="Chandigarh University Logo" style={{ height: "48px", objectFit: "contain" }} />
-          <img src="https://www.mazanyafoundation.com/_next/image?url=%2Ffooter_logo.png&w=640&q=75" alt="Mazanya Foundation Logo" style={{ height: "48px", objectFit: "contain", backgroundColor: "white", padding: "4px", borderRadius: "4px" }} />
+          <img src="https://i.ibb.co/dwrk71Jr/abc-1.png" alt="Mazanya Foundation Logo" style={{ height: "48px", objectFit: "contain", backgroundColor: "white", padding: "4px", borderRadius: "4px" }} />
         </div>
         <div className="gov-header-title">
           <p className="gov-header-govtext">Chandigarh University</p>
@@ -117,7 +117,7 @@ export const GovFooter = () => (
     <div className="container gov-footer-inner">
       <div style={{ display: "flex", justifyContent: "center", gap: "24px", alignItems: "center", marginBottom: "12px" }}>
         <img src="https://www.cuchd.in/includes/assets/images/header-footer/cu-logo-white.webp" alt="Chandigarh University Logo" style={{ height: "40px", objectFit: "contain" }} />
-        <img src="https://www.mazanyafoundation.com/_next/image?url=%2Ffooter_logo.png&w=640&q=75" alt="Mazanya Foundation Logo" style={{ height: "40px", objectFit: "contain", backgroundColor: "white", padding: "4px", borderRadius: "4px" }} />
+        <img src="https://i.ibb.co/dwrk71Jr/abc-1.png" alt="Mazanya Foundation Logo" style={{ height: "40px", objectFit: "contain", backgroundColor: "white", padding: "4px", borderRadius: "4px" }} />
       </div>
       <p className="gov-footer-govtext">Chandigarh University &amp; Mazanya Foundation</p>
       <p style={{color: '#93c5fd', fontSize: '12px', marginTop: '4px'}}>

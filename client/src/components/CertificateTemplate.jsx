@@ -61,7 +61,7 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
       <div style={{ textAlign: "center", marginBottom: "25px" }}>
         <div style={{ display: "flex", justifyContent: "center", gap: "32px", alignItems: "center" }}>
           <img src="https://www.cuchd.in/includes/assets/images/header-footer/cu-logo-white.webp" alt="Chandigarh University" style={{ height: "64px", objectFit: "contain", filter: "invert(1) grayscale(100%) blur(0.5px)" }} />
-          <img src="https://www.mazanyafoundation.com/_next/image?url=%2Ffooter_logo.png&w=640&q=75" alt="Mazanya Foundation" style={{ height: "64px", objectFit: "contain" }} />
+          <img src="https://i.ibb.co/dwrk71Jr/abc-1.png" alt="Mazanya Foundation" style={{ height: "64px", objectFit: "contain" }} />
         </div>
 
         <p style={{ margin: "4px 0", fontSize: "13px" }}>

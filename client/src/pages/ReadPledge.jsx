@@ -46,7 +46,7 @@ export default function ReadPledge() {
           <div className="pledge-dark-header">
             <div style={{ display: "flex", justifyContent: "center", gap: "24px", alignItems: "center", marginBottom: "16px" }}>
               <img src="https://www.cuchd.in/includes/assets/images/header-footer/cu-logo-white.webp" alt="Chandigarh University" style={{ height: "60px", objectFit: "contain" }} />
-              <img src="https://www.mazanyafoundation.com/_next/image?url=%2Ffooter_logo.png&w=640&q=75" alt="Mazanya Foundation" style={{ height: "60px", objectFit: "contain", backgroundColor: "white", padding: "4px", borderRadius: "8px" }} />
+              <img src="https://i.ibb.co/dwrk71Jr/abc-1.png" alt="Mazanya Foundation" style={{ height: "60px", objectFit: "contain", backgroundColor: "white", padding: "4px", borderRadius: "8px" }} />
             </div>
             <p className="pledge-dark-govtext">Chandigarh University &amp; Mazanya Foundation</p>
             <h2 className="pledge-dark-title">National Water Conservation Pledge</h2>

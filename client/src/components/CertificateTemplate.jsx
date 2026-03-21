@@ -1,5 +1,6 @@
 import React, { forwardRef, useEffect, useRef } from "react";
 import QRCode from "qrcode";
+import "./CertificateTemplate.css";
 
 const CertificateTemplate = forwardRef(({ certData }, ref) => {
   const qrRef = useRef(null);
@@ -10,7 +11,7 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
     const verifyUrl = `${window.location.origin}/verify/${certData.certificateId}`;
 
     QRCode.toCanvas(qrRef.current, verifyUrl, {
-      width: 90,
+      width: 70,
       margin: 1
     });
   }, [certData]);
@@ -31,152 +32,129 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
   });
 
   return (
-    <div
-      ref={ref}
-      style={{
-        width: "900px",
-        padding: "40px",
-        background: "#fff",
-        fontFamily: "serif",
-        border: "10px solid #003366",
-        position: "relative"
-      }}
-    >
-      {/* Watermark */}
-      <div
-        style={{
-          position: "absolute",
-          opacity: 0.04,
-          fontSize: "300px",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-          pointerEvents: "none"
-        }}
-      >
-        <img src="https://www.cuchd.in/includes/assets/images/header-footer/cu-logo-white.webp" alt="Watermark" style={{ width: "250px", opacity: 0.15, filter: "invert(1) grayscale(100%) blur(0.5px)" }} />
+    <div ref={ref} className="certificate">
+      <div className="border-outer"></div>
+      <div className="border-teal-left"></div>
+      <div className="border-teal-right"></div>
+      <div className="border-inner"></div>
+      <div className="gold-line"></div>
+
+      <div className="watermark">
+        <svg viewBox="0 0 1080 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#007a99" strokeWidth="1.4">
+            <path d="M0 60 Q270 20 540 60 Q810 100 1080 60"/>
+            <path d="M0 95 Q270 55 540 95 Q810 135 1080 95"/>
+            <path d="M0 130 Q270 90 540 130 Q810 170 1080 130"/>
+            <path d="M0 165 Q270 125 540 165 Q810 205 1080 165"/>
+            <path d="M0 290 Q270 250 540 290 Q810 330 1080 290"/>
+            <path d="M0 325 Q270 285 540 325 Q810 365 1080 325"/>
+            <path d="M0 360 Q270 320 540 360 Q810 400 1080 360"/>
+            <path d="M0 460 Q270 420 540 460 Q810 500 1080 460"/>
+            <path d="M0 495 Q270 455 540 495 Q810 535 1080 495"/>
+            <path d="M0 530 Q270 490 540 530 Q810 570 1080 530"/>
+          </g>
+        </svg>
       </div>
 
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: "25px" }}>
-        <div style={{ display: "flex", justifyContent: "center", gap: "32px", alignItems: "center" }}>
-          <img src="https://www.cuchd.in/includes/assets/images/header-footer/cu-logo-white.webp" alt="Chandigarh University" style={{ height: "64px", objectFit: "contain", filter: "invert(1) grayscale(100%) blur(0.5px)" }} />
-          <img src="https://i.ibb.co/dwrk71Jr/abc-1.png" alt="Mazanya Foundation" style={{ height: "64px", objectFit: "contain" }} />
+      <svg className="corner tl" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 8 L8 50" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L50 8" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L40 40" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.7"/>
+        <circle cx="8" cy="8" r="3.5" fill="#c9a84c"/>
+        <circle cx="8" cy="50" r="2" fill="#007a99"/>
+        <circle cx="50" cy="8" r="2" fill="#007a99"/>
+        <path d="M15 15 Q24 11 32 15 Q24 19 15 15Z" fill="#007a99" opacity="0.5"/>
+      </svg>
+      <svg className="corner tr" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 8 L8 50" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L50 8" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L40 40" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.7"/>
+        <circle cx="8" cy="8" r="3.5" fill="#c9a84c"/>
+        <circle cx="8" cy="50" r="2" fill="#007a99"/>
+        <circle cx="50" cy="8" r="2" fill="#007a99"/>
+        <path d="M15 15 Q24 11 32 15 Q24 19 15 15Z" fill="#007a99" opacity="0.5"/>
+      </svg>
+      <svg className="corner bl" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 8 L8 50" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L50 8" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L40 40" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.7"/>
+        <circle cx="8" cy="8" r="3.5" fill="#c9a84c"/>
+        <circle cx="8" cy="50" r="2" fill="#007a99"/>
+        <circle cx="50" cy="8" r="2" fill="#007a99"/>
+        <path d="M15 15 Q24 11 32 15 Q24 19 15 15Z" fill="#007a99" opacity="0.5"/>
+      </svg>
+      <svg className="corner br" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 8 L8 50" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L50 8" stroke="#14385a" strokeWidth="2" fill="none"/>
+        <path d="M8 8 L40 40" stroke="#c9a84c" strokeWidth="0.8" fill="none" opacity="0.7"/>
+        <circle cx="8" cy="8" r="3.5" fill="#c9a84c"/>
+        <circle cx="8" cy="50" r="2" fill="#007a99"/>
+        <circle cx="50" cy="8" r="2" fill="#007a99"/>
+        <path d="M15 15 Q24 11 32 15 Q24 19 15 15Z" fill="#007a99" opacity="0.5"/>
+      </svg>
+
+      <div className="content">
+        <div className="logos-row">
+          {/* REPLACE the src below with the Chandler University base64 string you provided! */}
+          <img className="logo-img" src="PASTE_YOUR_CU_LOGO_BASE64_HERE" alt="Chandigarh University" />
+          
+          {/* REPLACE the src below with the Mazanya base64 string you provided! */}
+          <img className="logo-img mazanya" src="PASTE_YOUR_MAZANYA_LOGO_BASE64_HERE" alt="Mazanya" />
         </div>
 
-        <p style={{ margin: "4px 0", fontSize: "13px" }}>
-          &nbsp;
-        </p>
-
-        <h1
-          style={{
-            marginTop: "12px",
-            color: "#B22222",
-            letterSpacing: "2px"
-          }}
-        >
-          CERTIFICATE OF PLEDGE
-        </h1>
-      </div>
-
-      {/* Body */}
-      <div
-        style={{
-          fontSize: "14px",
-          lineHeight: "1.8",
-          textAlign: "center",
-          padding: "0 30px"
-        }}
-      >
-        <p>This is to certify that</p>
-
-        <h2
-          style={{
-            margin: "8px 0",
-            color: "#003366",
-            borderBottom: "2px solid #003366",
-            display: "inline-block",
-            padding: "4px 12px"
-          }}
-        >
-          {certData.name}
-        </h2>
-
-        <p>
-          has taken the <b>National Water Conservation Pledge</b> and committed
-          {` ${pronoun}`} to conserve water, avoid wastage,
-          and promote water conservation awareness
-          for the wellbeing of all citizens.
-        </p>
-      </div>
-
-      {/* Info Grid */}
-      <div
-        style={{
-          marginTop: "40px",
-          display: "grid",
-          gridTemplateColumns: "repeat(3,minmax(0,1fr))",
-          gap: "20px",
-          alignItems: "center"
-        }}
-      >
-        {/* Certificate Info */}
-        <div style={{ fontSize: "12px" }}>
-          <p>
-            <b>Certificate ID:</b>
-          </p>
-          <p>{certData.certificateId}</p>
-
-          <p style={{ marginTop: "10px" }}>
-            <b>Date Issued:</b>
-          </p>
-          <p>{today}</p>
+        <div className="divider">
+          <div className="divider-line"></div>
+          <div className="divider-diamond"></div>
+          <div className="divider-dot"></div>
+          <div className="divider-diamond"></div>
+          <div className="divider-line"></div>
         </div>
 
-        {/* QR */}
-        <div style={{ textAlign: "center" }}>
-          <canvas ref={qrRef} />
+        <div className="pre-title">National Water Conservation</div>
+        <div className="cert-title">Certificate of Pledge</div>
 
-          <p style={{ fontSize: "10px", marginTop: "6px" }}>
-            Scan to verify certificate
-          </p>
+        <div className="ripple-wrap">
+          <svg className="ripple-bg" width="80" height="20" viewBox="0 0 80 20">
+            <path d="M0 10 Q10 0 20 10 T40 10 T60 10 T80 10" fill="none" stroke="#00b4cc" strokeWidth="2"/>
+          </svg>
         </div>
 
-        {/* Signature */}
-        <div style={{ textAlign: "center", fontSize: "12px" }}>
-          <div style={{
-            fontFamily: "'Brush Script MT', cursive",
-            fontSize: "24px",
-            color: "#000",
-            marginBottom: "4px",
-            borderBottom: "1px solid #ccc",
-            display: "inline-block",
-            padding: "0 20px"
-          }}>
-            Registrar
+        <div className="awarded-to">This is to certify that</div>
+
+        <div className="name-row">
+          <div className="name-ornament">~</div>
+          <div className="name-line">
+            <h2>{certData.name}</h2>
+          </div>
+          <div className="name-ornament">~</div>
+        </div>
+
+        <div className="body-text">
+          has taken the <b>National Water Conservation Pledge</b> and committed {pronoun} to conserve water, avoid wastage, and promote water conservation awareness for the wellbeing of all citizens.
+        </div>
+
+        <div className="footer-rule"></div>
+
+        <div className="footer">
+          <div className="footer-left">
+            <div><span className="label">Certificate ID:</span> <span className="val-line">{certData.certificateId}</span></div>
+            <div><span className="label">Date:</span> <span className="val-line">{today}</span></div>
           </div>
 
-          <p style={{ marginTop: "6px" }}>
-            Authorized Signatory
-          </p>
+          <div className="footer-right">
+            <div style={{ textAlign: "center" }}>
+              <canvas ref={qrRef} />
+              <p style={{ fontSize: "10px", marginTop: "6px" }}>Scan to verify certificate</p>
+            </div>
 
-          <p style={{ fontSize: "11px", color: "#444" }}>
-            Chandigarh University
-          </p>
+            <div className="registrar-block">
+              <div className="sign-line"></div>
+              <div className="registrar-title">Registrar</div>
+              <div className="registrar-org">Chandigarh University</div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <div
-        style={{
-          marginTop: "30px",
-          textAlign: "center",
-          fontSize: "10px",
-          color: "#555"
-        }}
-      >
-        This certificate was issued digitally via the MyGov citizen
-        engagement platform.
       </div>
     </div>
   );

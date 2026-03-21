@@ -146,7 +146,7 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
               </div>
 
               <div className="registrar-block">
-                <div className="sign-line"></div>
+                {/* <div className="sign-line"></div> */}
                 {/* <div className="registrar-title">Registrar</div> */}
                 {/* <div className="registrar-org">Chandigarh University</div> */}
               </div>

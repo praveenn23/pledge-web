@@ -142,13 +142,13 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
             <div className="footer-right">
               <div style={{ textAlign: "center" }}>
                 <canvas ref={qrRef} />
-                <p style={{ fontSize: "10px", marginTop: "6px" }}>Scan to verify certificate</p>
+                {/* <p style={{ fontSize: "10px", marginTop: "6px" }}>Scan to verify certificate</p> */}
               </div>
 
               <div className="registrar-block">
                 <div className="sign-line"></div>
-                <div className="registrar-title">Registrar</div>
-                <div className="registrar-org">Chandigarh University</div>
+                {/* <div className="registrar-title">Registrar</div> */}
+                {/* <div className="registrar-org">Chandigarh University</div> */}
               </div>
             </div>
           </div>

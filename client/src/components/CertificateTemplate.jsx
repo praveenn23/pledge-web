@@ -96,8 +96,9 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
 
         <div className="content">
           <div className="logos-row">
-            <img className="logo-img" src="https://i.ibb.co/fYF8MyR0/chandigarh-university-logo-cu-freelogovectors-net-400x142.png" alt="Chandigarh University"/>
             <img className="logo-img mazanya" src="https://i.ibb.co/dwrk71Jr/abc-1.png" alt="Mazanya" />
+            <img className="logo-img" src="https://i.ibb.co/fYF8MyR0/chandigarh-university-logo-cu-freelogovectors-net-400x142.png" alt="Chandigarh University"/>
+            <img className="logo-img mazanya" src="https://i.ibb.co/3mWzNzZL/Whats-App-Image-2026-03-21-at-21-49-39.png" alt="ecogenis" />
           </div>
 
           <div className="divider">

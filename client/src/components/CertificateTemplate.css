@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@700;900&family=Lato:wght@300;400;700&display=swap');
 
+.certificate-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 .certificate {
   width: 1120px;
   min-height: 640px;
@@ -7,6 +15,30 @@
   background: #fdfcf8;
   overflow: hidden;
   box-sizing: border-box;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .certificate { zoom: 0.9; }
+}
+@media (max-width: 1024px) {
+  .certificate { zoom: 0.8; }
+}
+@media (max-width: 900px) {
+  .certificate { zoom: 0.7; }
+}
+@media (max-width: 768px) {
+  .certificate { zoom: 0.6; }
+}
+@media (max-width: 600px) {
+  .certificate { zoom: 0.45; }
+}
+@media (max-width: 480px) {
+  .certificate { zoom: 0.35; }
+}
+@media (max-width: 380px) {
+  .certificate { zoom: 0.28; }
 }
 
 .certificate *, .certificate *::before, .certificate *::after {

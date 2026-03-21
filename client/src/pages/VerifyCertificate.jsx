@@ -49,7 +49,7 @@ export default function VerifyCertificate() {
             </div>
           </div>
         ) : cert ? (
-          <div style={{ width: "100%", maxWidth: "950px" }}>
+          <div style={{ width: "100%", maxWidth: "1200px" }}>
             <div className="cert-success-banner no-print" style={{ marginBottom: "24px" }}>
               <div style={{ fontSize: "32px", marginBottom: "8px" }}>✅ Valid Certificate</div>
               <p style={{ fontSize: "14px", opacity: 0.9 }}>This certificate is authentic and registered with Chandigarh University.</p>

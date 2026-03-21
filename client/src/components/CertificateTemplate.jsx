@@ -6,9 +6,10 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
   const qrRef = useRef(null);
 
   useEffect(() => {
-    if (!certData?.certificateId || !qrRef.current) return;
+    const id = certData?.certificateId || certData?.certificate_id;
+    if (!id || !qrRef.current) return;
 
-    const verifyUrl = `${window.location.origin}/verify/${certData.certificateId}`;
+    const verifyUrl = `${window.location.origin}/verify/${id}`;
 
     QRCode.toCanvas(qrRef.current, verifyUrl, {
       width: 70,
@@ -136,7 +137,7 @@ const CertificateTemplate = forwardRef(({ certData }, ref) => {
 
           <div className="footer">
             <div className="footer-left">
-              <div><span className="label">Certificate ID:</span> <span className="val-line">{certData.certificateId}</span></div>
+              <div><span className="label">Certificate ID:</span> <span className="val-line">{certData.certificateId || certData.certificate_id}</span></div>
               <div><span className="label">Date:</span> <span className="val-line">{today}</span></div>
             </div>
 
